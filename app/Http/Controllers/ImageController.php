@@ -41,31 +41,7 @@ class ImageController extends Controller
         return response()->json(['message' => 'Second image uploaded successfully', 'path' => $path]);
     }
 
-    // public function mergeImages()
-    // {
-    //     $baseImagePath = storage_path('app/public/uploads/base_image.png');
-    //     $secondImagePath = storage_path('app/public/uploads/second_image.png');
 
-    //     if (!file_exists($baseImagePath) || !file_exists($secondImagePath)) {
-    //         return response()->json(['error' => 'Images not found'], 404);
-    //     }
-
-    //     // Open images
-    //     $baseImage = Image::make($baseImagePath);
-    //     $secondImage = Image::make($secondImagePath);
-
-    //     // Insert second image into base image (100px from top, 20px from left)
-    //     $baseImage->insert($secondImage, 'top-left', 20, 100);
-
-    //     // Save the merged image
-    //     $mergedImagePath = storage_path('app/public/uploads/merged_image.png');
-    //     $baseImage->save($mergedImagePath);
-
-    //     return response()->json([
-    //         'message' => 'Images merged successfully',
-    //         'path' => asset('storage/uploads/merged_image.png')
-    //     ]);
-    // }
 
     public function mergeImages()
     {
